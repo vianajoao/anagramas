@@ -1,0 +1,18 @@
+a = ['pera','carro','corra','posaras','raposas','pare','corar','apossar','assopra','cisco']
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if len(a[i]) > len(a[j]):
+            a[i],a[j] = a[j],a[i]
+for i in range( len(a)-1):
+    if len(a[i]) > len(a[i+1]):
+          a[i] , a[i+1] = a[i+1], a[i]
+for i in range(len(a)-1):
+    if len(a[i]) == len(a[i+1]):
+        b = a[i]
+        b = list(b)
+        b = sorted(b)
+        c = a[i+1]
+        c = list(c)
+        c = sorted(c)
+        if b == c:
+            print(a[i],a[i+1]) 
